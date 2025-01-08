@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poem and Proposal</title>
-    <link rel="stylesheet" href="css/styles.css"> <!-- Linking to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="mainPage">
         <h1>A Whisper of Love</h1>
         <p>In the quiet glow of the evening sun,</p>
         <p>Where whispers of the heart have just begun,</p>
@@ -21,15 +21,10 @@
         <div class="floating-images-container" id="floatingImages">
             <!-- Floating Images will be added here by JavaScript -->
         </div>
-
-        <a href="#" class="surprise-link" onclick="showProposalPage()">Will you marry me?</a>
     </div>
 
-    <!-- Will you marry me page (hidden initially) -->
+    <!-- Proposal Page -->
     <div id="proposalPage" class="container hidden">
-        <div class="proposal-background">
-            <img src="images/background.jpg" alt="Proposal Background"> <!-- Updated Image Path -->
-        </div>
         <h1>Will you marry me?</h1>
         <div class="proposal-options">
             <button onclick="showYesMessage()">Yes</button>
@@ -37,7 +32,22 @@
         </div>
     </div>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script> <!-- Linking to the external JS file -->
+    <!-- Yes or No response area -->
+    <div id="responseArea" class="yes-no-container hidden">
+        <div id="yesPage" class="yes-page hidden">
+            <div class="message-box">
+                <h2>I'm so happy! You said YES!</h2>
+                <img src="data:image/png;base64,INSERT_YOUR_BASE64_HERE" alt="Heart" />
+            </div>
+        </div>
+        <div id="noPage" class="no-page hidden">
+            <div class="message-box">
+                <h2>Maybe next time...</h2>
+                <img src="data:image/png;base64,INSERT_YOUR_BASE64_HERE" alt="Sad Heart" />
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
